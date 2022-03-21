@@ -1,7 +1,6 @@
 import discord
 import os
 from discord.ext import commands
-from keepalive import keep_alive
 
 
 bot = commands.Bot(command_prefix='+', activity = discord.Game(name='+help'))
@@ -28,5 +27,4 @@ bot.load_extension('cogs.tickets')
 bot.load_extension('cogs.misc')
 bot.load_extension('cogs.moderation')
 bot.load_extension('cogs.fun')
-keep_alive()
 bot.run('TOKEN')
