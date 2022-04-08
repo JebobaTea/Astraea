@@ -30,7 +30,7 @@ class Tickets(commands.Cog):
         await ctx.send(embed = embed)
     
     @commands.command()
-    async def closeticket(self,ctx):
+    async def closeticket(self, ctx):
         with open('data.json') as f:
             data = json.load(f)
         id = str(ctx.message.guild.id)
@@ -48,7 +48,7 @@ class Tickets(commands.Cog):
             await ctx.send(embed = embed)
     
     @commands.command()
-    async def renameticket(self,ctx,*,arg):
+    async def renameticket(self, ctx, *, arg):
         with open('data.json') as f:
             data = json.load(f)
         id = str(ctx.message.guild.id)
