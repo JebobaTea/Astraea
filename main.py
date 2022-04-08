@@ -8,11 +8,11 @@ bot.remove_command('help')
 
 
 @bot.event
-async def on_command_error(ctx,error):
-    if isinstance(error,discord.ext.commands.errors.CommandNotFound):
+async def on_command_error(ctx, error):
+    if isinstance(error, discord.ext.commands.errors.CommandNotFound):
         embed = discord.Embed(title = 'Error', description = 'Unknown Command', color = discord.Color.red())
         await ctx.send(embed = embed)
-    elif isinstance(error,discord.ext.commands.errors.MissingRequiredArgument):
+    elif isinstance(error, discord.ext.commands.errors.MissingRequiredArgument):
         embed = discord.Embed(title = 'Error', description = 'You\'re missing an argument!', color = discord.Color.red())
         await ctx.send(embed = embed)
     elif isinstance(error, commands.MissingPermissions):
