@@ -2,6 +2,7 @@ import discord
 import json
 from discord.ext import commands
 
+
 class Tickets(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -55,12 +56,13 @@ class Tickets(commands.Cog):
             data[id] = {'ticket-counter': 0, 'ticket-channel-ids': []}
         if ctx.channel.id in data[id]['ticket-channel-ids']:
             channel = ctx.channel
-            await channel.edit(name=arg)
+            await channel.edit(name = arg)
             embed = discord.Embed(title = 'Ticket Creator', description = 'Your ticket has been renamed.', color = discord.Color.green())
             await ctx.send(embed = embed)
         else:
             embed = discord.Embed(title = 'Ticket Creator', description = 'Please run this in the channel you want to rename!', color = discord.Color.red())
             await ctx.send(embed = embed)
+
 
 def setup(bot):
     bot.add_cog(Tickets(bot))
