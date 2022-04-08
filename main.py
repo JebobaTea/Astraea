@@ -3,7 +3,7 @@ import os
 from discord.ext import commands
 
 
-bot = commands.Bot(command_prefix='+', activity = discord.Game(name='+help'))
+bot = commands.Bot(command_prefix = '+', activity = discord.Game(name = '+help'))
 bot.remove_command('help')
 
 
@@ -19,7 +19,7 @@ async def on_command_error(ctx,error):
         embed = discord.Embed(title = 'Error', description = 'Insufficient permissions!', color = discord.Color.red())
         await ctx.send(embed = embed)
     else:
-        embed = discord.Embed(title='Error', description=str(error), color = discord.Color.red())
+        embed = discord.Embed(title = 'Error', description = str(error), color = discord.Color.red())
         await ctx.send(embed = embed)
 
 
