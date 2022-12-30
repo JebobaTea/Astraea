@@ -1,5 +1,11 @@
 # Astraea
-Simple Discord Utility Bot
+Simple discord utility bot with fun commands and utility commands.
+
+Currently a WIP:
+
+--> 🔨 Warning system
+
+--> 🔨 Use slash commands instead of reading message contents
 
 ## Commands
 ### +help
